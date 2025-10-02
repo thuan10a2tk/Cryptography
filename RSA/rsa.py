@@ -1,5 +1,6 @@
 from Crypto.Util.number import long_to_bytes, bytes_to_long, getPrime
 from utils import display, bug, getNumber
+from sympy import nextprime
 def main():
     arr = [
         "Encrypt (n,e,m)",
@@ -70,8 +71,8 @@ def decrypt():
 def generate():
     bit = getNumber("Enter number of bit for q (number base): ")
     q = getPrime(bit)
-    bit = getNumber("Enter number of bit for p (number base): ")
-    p = getPrime(bit)
+    # bit = getNumber("Enter number of bit for p (number base): ")
+    p = nextprime(q)
     print("N =", p * q)
     print("q =", q)
     print("p =", p)

@@ -38,7 +38,7 @@ def rail_fence_decrypt(cipher: str, key: int)-> str:
         cipher = cipher[arr[i]:]
 
     message = ""
-    direction_down = False
+    direction_down=False
     row = 0
     for i in range(l):
         message += rail[row].pop(0)
